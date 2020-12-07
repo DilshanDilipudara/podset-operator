@@ -29,15 +29,14 @@ type PodSetSpec struct {
 	// +kubebuilder:validation:Minimum=1
 	// +kubebuilder:validation:Maximum=10
 	Replicas int32 `json:"replicas,omitempty"`
-	
 }
 
 // PodSetStatus defines the current state of PodSet
 type PodSetStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-	PodNames        []string        `json:"podNames"`
-    AvailableReplicas    int32    `json:"availableReplicas"`
+	PodNames          []string `json:"podNames"`
+	AvailableReplicas int32    `json:"availableReplicas"`
 }
 
 // +kubebuilder:object:root=true
